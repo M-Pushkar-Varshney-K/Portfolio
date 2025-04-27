@@ -11,13 +11,13 @@ import { Toaster } from "react-hot-toast";
 import CustomCursor from "@/components/CustomCursor";
 import { metadata} from "@/lib/metaData";
 
+
 const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     <html lang="en" className="!scroll-smooth">
       <body
