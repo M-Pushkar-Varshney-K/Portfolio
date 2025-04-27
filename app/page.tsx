@@ -12,14 +12,6 @@ import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import Achievements from "@/components/achievements";
 
-export const metadata = {
-  title: "Pushkar | Personal Portfolio",
-  description: "Pushkar is a full-stack & android app developer.",
-  icons:{
-    icon: "/favicon.ico",
-  }
-};
-
 export default function Home() {
   const [loading, setLoading] = useState(true);
 

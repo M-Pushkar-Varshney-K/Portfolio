@@ -9,16 +9,9 @@ import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import CustomCursor from "@/components/CustomCursor";
+import { metadata } from "@/lib/metaData";
 
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata = {
-  title: "Pushkar | Personal Portfolio",
-  description: "Pushkar is a full-stack & android app developer.",
-  icons:{
-    icon: "/favicon.ico",
-  }
-};
 
 export default function RootLayout({
   children,
