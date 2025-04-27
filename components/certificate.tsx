@@ -61,7 +61,7 @@ export default function Project({
               src={imageUrl}
               alt={`${title} image`}
               quality={95}
-              className="rounded-lg shadow-2xl w-full h-auto object-contain transition 
+              className="rounded-lg shadow-2xl w-full h-72 object-contain transition 
                 group-hover:scale-[1.03] 
                 group-hover:-translate-y-1 
                 group-hover:rotate-[1deg]"/>

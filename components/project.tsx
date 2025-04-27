@@ -14,60 +14,45 @@ export default function Project({
   imageUrl,
   url,
 }: ProjectProps) {
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <motion.a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      ref={ref}
-      style={{
-        scale: scaleProgress,
-        opacity: opacityProgress,
-      }}
-      className="group block mb-6 sm:mb-10 last:mb-0"
+    <motion.div
+      className="group relative w-[320px] h-[450px] flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 border border-gray-300 dark:bg-white/10 dark:border-white/20 hover:shadow-neon transition-transform duration-300 cursor-pointer scale-90 opacity-70 hover:scale-100 hover:opacity-100"
     >
-      <section className="bg-gray-100 max-w-[48rem] border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 cursor-pointer">
-        <div className="flex flex-col sm:flex-row sm:items-start gap-6 p-6 sm:p-10">
-          {/* Text Content */}
-          <div className="flex-1">
-            <h3 className="text-2xl font-semibold">{title}</h3>
-            <p className="mt-2 text-gray-700 leading-relaxed dark:text-white/70">
+      <a href={url} target="_blank" rel="noopener noreferrer" className="flex flex-col h-full">
+        {/* Image */}
+        <div className="relative w-full h-1/2">
+          <Image
+            src={imageUrl}
+            alt={`${title} image`}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+
+        {/* Text */}
+        <div className="flex-1 p-4 flex flex-col justify-between">
+          <div>
+            <h3 className="text-xl font-bold break-words whitespace-pre-wrap">{title}</h3>
+            <p className="mt-2 text-gray-600 text-sm dark:text-white/70 break-words whitespace-pre-wrap text-justify">
               {description}
             </p>
-            <ul className="flex flex-wrap mt-4 gap-2">
-              {tags.map((tag, index) => (
-                <li
-                  key={index}
-                  className="bg-black/70 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                >
-                  {tag}
-                </li>
-              ))}
-            </ul>
           </div>
-
-          {/* Image Content */}
-          <div className="relative w-full sm:w-[280px] flex-shrink-0 self-center sm:self-start">
-            <Image
-              src={imageUrl}
-              alt={`${title} image`}
-              quality={95}
-              className="rounded-lg shadow-2xl w-full h-auto object-contain transition 
-                group-hover:scale-[1.03] 
-                group-hover:-translate-y-1 
-                group-hover:rotate-[1deg]"/>
-          </div>
+          <ul className="flex flex-wrap mt-4 gap-2">
+            {tags.map((tag, index) => (
+              <li
+                key={index}
+                className="bg-black/70 px-2 py-1 text-[0.65rem] uppercase tracking-wide text-white rounded-full dark:text-white/70"
+              >
+                {tag}
+              </li>
+            ))}
+          </ul>
         </div>
-      </section>
-    </motion.a>
+
+        {/* Hover Neon Border */}
+        {/* <div className="absolute inset-0z rounded-lg border-2 border-transparent group-hover:border-cyan-400 transition-all pointer-events-none"></div> */}
+      </a>
+    </motion.div>
   );
 }

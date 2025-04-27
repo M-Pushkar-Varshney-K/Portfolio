@@ -11,6 +11,11 @@ import PSII from "@/public/PSII.png";
 import PSI from "@/public/PSI.png";
 import NPTEL from "@/public/NPTEL.png";
 import PythonML from "@/public/PyhtonML.png";
+import hack1 from "@/public/images/hack1.jpg";
+import hack2 from "@/public/images/hack2.jpg";
+import hack3 from "@/public/images/hack3.jpg";
+import LPUrank from "@/public/images/LPUrank.png";
+import leetcode from "@/public/images/leetcode.jpg";
 
 
 export const projects = [
@@ -33,19 +38,23 @@ export const links = [
     hash: "#about",
   },
   {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
     name: "Skills",
     hash: "#skills",
+  },
+  {
+    name: "Projects",
+    hash: "#projects",
   },
   {
     name: "Certificates",
     hash: "#certificates",
   },
   {
-    name: "Experience",
+    name: "Achievements",
+    hash: "#achievements",
+  },
+  {
+    name: "Education",
     hash: "#experience",
   },
   {
@@ -184,3 +193,29 @@ export const skillsData = [
   { name: "Power BI", color: "#f2c94c" },
 ] as const;
 
+export const achievement = [
+  {
+    name:"Leetcode",
+    title: "Global Rank 4375th",
+    img: leetcode,
+    description: "Among 22k+ participants in LeetCode Weekly Contest 426.",
+  },
+  {
+    name:"Leetcode",
+    title: "Top 26.19% on LeetCode",
+    img:leetcode,
+    description: "Ranked in the top 26.19% of all LeetCode users, achieving a peak rating of 1601.",
+  },
+  {
+    name:"LPU",
+    title: "S-1 Rank in LPU",
+    img: LPUrank,
+    description: "Among all LPU B.Tech students, I got S-1 rank with Top 11-50%.",
+  },
+  {
+    name:"Hackathon",
+    title: "Finalist in Web-a-Thon",
+    img: [hack1, hack2, hack3],
+    description: "Reached the final round of Web-a-Thon, securing a spot in the top 10 teams out of 250+ participants.",
+  },
+];

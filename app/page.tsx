@@ -10,12 +10,21 @@ import Skills from "@/components/skills";
 import Certificates from "@/components/certificates";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
+import Achievements from "@/components/achievements";
+
+export const metadata = {
+  title: "Pushkar | Personal Portfolio",
+  description: "Pushkar is a full-stack & android app developer.",
+  icons:{
+    icon: "/favicon.ico",
+  }
+};
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 2500);
+    const timeout = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -28,9 +37,10 @@ export default function Home() {
           <Intro />
           <SectionDivider />
           <About />
-          <Projects />
           <Skills />
+          <Projects />
           <Certificates />
+          <Achievements />
           <Experience />
           <Contact />
         </>

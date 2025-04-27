@@ -13,3 +13,36 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+/* Neon hover effect */
+.hover\:shadow-neon:hover {
+  box-shadow: 0 0 15px #b35a8a, 0 0 30px #3bdb83, 0 0 45px #b84949;
+}
+
+/* Smooth thin scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar-thumb-gray-400 {
+  scrollbar-color: #9ca3af #f3f4f6;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.group:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+
