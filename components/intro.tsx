@@ -100,7 +100,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        {/* Contact Button */}
+        {/* video cv */}
         <motion.button
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           whileHover={{ scale: 1.1 }}
@@ -193,7 +193,7 @@ export default function Intro() {
           {/* LeetCode */}
           <a
             className="bg-white p-4 text-gray-700 hover:text-white hover:bg-orange-500 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:bg-orange-500 group"
-            href="https://leetcode.com/your_leetcode_username/"
+            href="https://leetcode.com/u/Pushkar_Varshney/"
             target="_blank"
           >
             <SiLeetcode className="transition-transform duration-300 group-hover:rotate-12" />
@@ -202,7 +202,7 @@ export default function Intro() {
           {/* GeeksforGeeks */}
           <a
             className="bg-white p-4 text-gray-700 hover:text-white hover:bg-green-600 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:bg-green-600 group"
-            href="https://auth.geeksforgeeks.org/user/your_gfg_username/"
+            href="https://www.geeksforgeeks.org/user/appushkarvarshney/"
             target="_blank"
           >
             <SiGeeksforgeeks className="transition-transform duration-300 group-hover:rotate-12" />
@@ -211,7 +211,7 @@ export default function Intro() {
           {/* Instagram */}
           <a
             className="bg-white p-4 text-gray-700 hover:text-white hover:bg-pink-500 flex items-center gap-2 text-[1.5rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 dark:hover:bg-pink-500 group"
-            href="https://instagram.com/your_instagram_username/"
+            href="https://www.instagram.com/m.pushkar.varshney.k/"
             target="_blank"
           >
             <FaInstagramSquare className="transition-transform duration-300 group-hover:rotate-12" />
